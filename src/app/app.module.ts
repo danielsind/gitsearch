@@ -8,7 +8,8 @@ import { GitComponent } from './git/git.component';
 @NgModule({
   declarations: [
     AppComponent,
-    GitComponent
+    GitComponent,
+    
   ],
   imports: [
     BrowserModule,
