@@ -1,25 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router'
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitComponent } from './git/git.component';
+import { GitService } from './git/git.service';
 import { RepoComponent } from './repo/repo.component';
+
+const routes:Routes = [
+  {path:"git",component:GitComponent},
+  {path:"repo",component:RepoComponent},
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     GitComponent,
-    RepoComponent,
-
+    RepoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    FormsModule,
     HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [GitService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
