@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitComponent implements OnInit {
 
+  users: any = [];
+  repos: any = [];
+  username: string;
+  
   constructor() { }
 
   ngOnInit() {
