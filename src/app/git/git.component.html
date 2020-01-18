@@ -1,1 +1,88 @@
-<p>git works!</p>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img class="img-fluid mr-3" src="assets/git-1-2.png" alt="">GitSearch</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Will Route Soon</a>
+        </li>
+  
+  
+      </ul>
+    </div>
+  </nav>
+  
+  <!--Search Form-->
+  <div class="container mt-4">
+    <form>
+      <div class="form-group">
+  
+        <input type="text" class="form-control" name="name" id="gitSearch" aria-describedby="emailHelp" placeholder="Search Github" [(ngModel)]="username"(keyup)="searchUser()" >
+        <small id="emailHelp" class="form-text text-muted">Enter your search</small>
+      </div>
+    </form>
+    {{username}}
+  </div>
+  <!--Users-->
+  <div class="container mt-5" *ngIf="users">
+    <div class="card card-default  p-4">
+      <div class="card-heading">
+        <h3 class="card-title mr-3">{{users.name}}</h3>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-thumbnail github-avatar" src="{{users.avatar_url}}">
+          </div>
+          <div class="col-md-8">
+            <div class="stats">
+              <span class="badge badge-secondary">{{users.public_repos}} Public Repos</span>
+              <span class="badge badge-primary">{{users.public_gists}} Public Gists</span>
+              <span class="badge badge-success">{{users.followers}} Followers</span>
+              <span class="badge badge-info">{{users.following}} Following</span>
+            </div>
+            <br>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>usersname: </strong>{{users.login}}</li>
+              <li class="list-group-item"><strong>Location: </strong>{{users.location}}</li>
+              <li class="list-group-item"><strong>Email: </strong>{{users.email}}</li>
+              <li class="list-group-item"><strong>Blog: </strong>{{users.blog}}</li>
+              <li class="list-group-item"><strong>Member Since: </strong>{{users.created_at}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Repos-->
+    <div class="card card2 card-default mt-5">
+      <div class="card card2 card-heading pt-2">
+        <h3 class=" card2 card-title ml-5 ">Repos</h3>
+      </div>
+      <div class="card2 card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <div *ngFor="let repo of repos">
+              <div class="row">
+                <div class="col-md-9">
+                  <h4><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></h4>
+                  <p>{{repo.description}}</p>
+                </div>
+                <div class="col-md-3">
+                  <span class="badge badge-default">{{repo.watchers}} Watchers</span>
+                  <span class="badge badge-primary">{{repo.forks}} Forks</span>
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

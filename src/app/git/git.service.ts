@@ -12,13 +12,13 @@ export class GitService {
 
 
       //Git profiles
-  gitProfile() {
-    return this.http.get(this.apiUrl + this.username + "?access_token=" + this.apiKey).map(result => result)
+  gitProfile(){
+    return this.http.get(this.apiUrl + this.username + "?access_token=" + this.apiKey)
   }
 
   //Git Repos
   gitRepos() {
-    return this.http.get(this.apiUrl + this.username + "/repos" + "?access_token=" + this.apiKey).map(result => result)
+    return this.http.get(this.apiUrl + this.username + "/repos" + "?access_token=" + this.apiKey)
   }
   constructor(private http: HttpClient) {
     console.log("GitService Ready");
