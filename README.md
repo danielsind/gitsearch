@@ -3,6 +3,10 @@
 ## Developer 
 
 * Daniel Sindet 
+## Description 
+* This web app allows a user to enter a name belonging to a github user
+* The Users profile and  User name location and mail will appear
+* The Repositories will appear on click of the Repositories at the nav-bar
 ## Technologies Used 
 * Angular CLI
 * JavaScript
