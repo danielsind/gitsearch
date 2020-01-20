@@ -19,7 +19,7 @@
 ## Challenges 
 * Applying Custom Pipes and Custom directives
 * Linking API keys from github
-* Using promises
+* Using promises o the Http service.
 
 ### Acknowledgements 
 * Classmates
