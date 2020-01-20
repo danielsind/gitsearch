@@ -20,7 +20,8 @@
 * Applying Custom Pipes and Custom directives
 * Linking API keys from github
 * Using promises o the Http service.
-
+## Codebeat
+* [![codebeat badge](https://codebeat.co/badges/9713711e-0722-4ecb-8fc4-46567774cfd9)](https://codebeat.co/projects/github-com-danielsind-gitsearch-master)
 ### Acknowledgements 
 * Classmates
 * TM's at Moringa School
