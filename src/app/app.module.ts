@@ -9,6 +9,7 @@ import { GitComponent } from './git/git.component';
 import { GitService } from './git/git.service';
 import { RepoComponent } from './repo/repo.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes:Routes = [
   {path:"git",component:GitComponent},
@@ -20,7 +21,8 @@ const routes:Routes = [
     AppComponent,
     GitComponent,
     RepoComponent,
-    NavBarComponent
+    NavBarComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
