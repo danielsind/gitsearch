@@ -23,6 +23,7 @@
     "@ngx-progressbar/http-client": "^3.0.2",
     "bootstrap": "^4.4.1",
     "ngx-progressbar": "^6.0.1",
+    "nyc": "^15.0.0",
     "popper": "^1.0.1",
     "propper": "^1.0.3",
     "rxjs": "~6.4.0",
